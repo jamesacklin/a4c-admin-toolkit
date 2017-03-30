@@ -1,0 +1,8 @@
+// Import vendor styles
+@import "vendor/_bootstrap.scss", "vendor/font-awesome.scss"; // Toolkit
+
+body {
+	font-size  : 16px;
+	line-height: 1.5;
+	font-family: 'Roboto';
+}
