@@ -1,3 +1,5 @@
+<img src="http://apps4clubz.com/wp-content/uploads/2017/01/lockup_trans_dark.png" width="300">
+
 # Apps4Clubz Admin UI Toolkit
 
 This UI toolkit is a highly-modular design system for the [Apps4Clubz](http://www.apps4clubz.com) Admin application. It contains different materials that can be assembled into more complex page layouts. This guide contains real working examples, code snippets, documentation, and style guidelines.
@@ -13,6 +15,6 @@ $ npm start
 
 ## Credits
 
-[Fabricator](http://twitter.com/lukeaskew).
-[Bootstrap](https://github.com/twbs/bootstrap)
-[FontAwesome](https://github.com/FortAwesome/Font-Awesome)
+* [Fabricator](http://twitter.com/lukeaskew)
+* [Bootstrap](https://github.com/twbs/bootstrap)
+* [FontAwesome](https://github.com/FortAwesome/Font-Awesome)
