@@ -36,6 +36,17 @@
 
 .f-item-preview {
 	@include clearfix;
+	background: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding: 1rem;
+	border-radius: 3px;
+	&:before {
+		content: 'EXAMPLE';
+		margin-bottom: 1rem;
+		font-weight: bold;
+		color: #CCC;
+		letter-spacing: 0.125em;
+	}
 }
 
 .f-item-border-bottom {
