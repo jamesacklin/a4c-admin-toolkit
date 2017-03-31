@@ -1,8 +1,8 @@
 $base-colors: (
-	dark: hsl(0, 0%, 12%),
-	medium: hsl(0, 0%, 46%),
-	light: hsl(0, 0%, 80%),
-	accent: hsl(0, 0%, 46%)
+	dark: #222,
+	medium: #666,
+	light: #CCC,
+	accent: #219633
 );
 
 $theme-dark: (
@@ -12,8 +12,8 @@ $theme-dark: (
 );
 
 $theme-light: (
-	menu-background: hsl(0, 0%, 100%),
-	menu-text: map-get($base-colors, medium),
+	menu-background: #EFEFEF,
+	menu-text: map-get($base-colors, dark),
 	normal: map-get($base-colors, medium)
 );
 
