@@ -1,13 +1,15 @@
 ---
 notes: |
-  Navbars are responsive meta components that serve as navigation headers for your application or site. They begin collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.
+  To further customize the navbar with whatever color you wish (a client color, for example), add `.navbar-branded` and specify a HEX color in the `data-brand` attribute. The front-end will calculate a reasonable contrasting color and restyle the navbar appropriately. In the example, we're told the navbar to customize itself based on a nice blue, `#4099FF`.
+
+  To tweak the color inversion algorythm, look for `function invertColor(rgb)` in `toolkit.js`.
 ---
 
-<nav class="navbar navbar-default navbar-inverse">
+<nav class="navbar navbar-default navbar-branded" data-brand="#4099FF">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>

@@ -1,5 +1,5 @@
 $base-colors: (
-	dark: #222,
+	dark: #333,
 	medium: #666,
 	light: #CCC,
 	accent: #219633
@@ -12,7 +12,7 @@ $theme-dark: (
 );
 
 $theme-light: (
-	menu-background: #EFEFEF,
+	menu-background: #F5F5F5,
 	menu-text: map-get($base-colors, dark),
 	normal: map-get($base-colors, medium)
 );
