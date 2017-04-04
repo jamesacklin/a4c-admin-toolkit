@@ -1,9 +1,11 @@
 ---
 notes: |
-  To customize the navbar to use whatever color you wish (a client color, for example), add `.navbar-branded` and specify a HEX color in the `data-brand` attribute. The JavaScript in `toolkit.js` will do all the work—otherwise it will fall back to the standard `.navbar-default` treatment. In the example, we're told the navbar to customize itself based on a nice blue, `#4099FF`.
+  To further customize the navbar with whatever color you wish (a client color, for example), add `.navbar-branded-inverse` and specify a HEX color in the `data-brand` attribute. The JavaScript in `toolkit.js` will calculate a reasonable contrasting color and restyle the navbar appropriately. In the example, we're told the navbar to customize itself based on a nice blue, `#4099FF`.
+
+  To tweak the color inversion algorythm, look for `function invertColor(rgb)` in `toolkit.js`.
 ---
 
-<nav class="navbar navbar-default navbar-branded" data-brand="#4099FF">
+<nav class="navbar navbar-default navbar-branded-inverse" data-brand="#4099FF">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

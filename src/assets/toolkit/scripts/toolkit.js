@@ -74,22 +74,39 @@ $(document).ready(function() {
       return Math.floor(n);
   }
 
-  $('.navbar-branded').each(function(){
+  $('.navbar-branded-inverse').each(function(){
 		var brandColor = $(this).attr('data-brand');
 		if (!brandColor){
 			brandColor = "#000000";
 		}
 		var inverseColor = invertCssColor(brandColor);
-		var navbarCss = ".navbar-branded { background-color:" + brandColor + ";}" +
-										".navbar-branded { border-color:" + inverseColor + ";}" +
-										".navbar-branded .navbar-nav > li > a, .navbar-branded .navbar-brand { color:" + inverseColor + ";}" +
-										" .navbar-branded .navbar-nav > li > a:hover { background-color: " + inverseColor +"; color: " + brandColor + ";}" +
-										".navbar-branded .navbar-nav > .active > a, .navbar-branded .navbar-nav > .active > a:hover, .navbar-branded .navbar-nav > .active > a:focus, .navbar-branded .navbar-nav > .open > a, .navbar-branded .navbar-nav > .open > a:hover,.navbar-branded .navbar-nav > .open > a:focus { background: " + inverseColor + "; color: " + brandColor + "; }" +
+		var navbarCss = ".navbar-branded-inverse { background-color:" + brandColor + ";}" +
+										".navbar-branded-inverse { border-color:" + brandColor + ";}" +
+										".navbar-branded-inverse .navbar-nav > li > a, .navbar-branded-inverse .navbar-brand { color:" + inverseColor + ";}" +
+										" .navbar-branded-inverse .navbar-nav > li > a:hover { background-color: " + inverseColor +"; color: " + brandColor + ";}" +
+										".navbar-branded-inverse .navbar-nav > .active > a, .navbar-branded-inverse .navbar-nav > .active > a:hover, .navbar-branded-inverse .navbar-nav > .active > a:focus, .navbar-branded-inverse .navbar-nav > .open > a, .navbar-branded-inverse .navbar-nav > .open > a:hover,.navbar-branded-inverse .navbar-nav > .open > a:focus { background: " + inverseColor + "; color: " + brandColor + "; }" +
+										".navbar-branded-inverse .dropdown-menu > li > a:hover, .navbar-branded-inverse .dropdown-menu > li > a:focus { background: " + brandColor + "; color: " + inverseColor +"; }";
+
+										// TODO: write CSS for mobile menu button
+		writePageCss(navbarCss);
+	});
+
+
+	$('.navbar-branded').each(function(){
+		var brandColor = $(this).attr('data-brand');
+		if (!brandColor){
+			brandColor = "#000000";
+		}
+		var inverseColor = invertCssColor(brandColor);
+		var navbarCss = ".navbar-branded { border-top: 5px solid " + 	brandColor + "}" +
+										".navbar-branded .navbar-nav > li > a, .navbar-branded .navbar-brand { color:" + brandColor + ";}" +
+										".navbar-branded .navbar-nav > li > a:hover { background-color: " + brandColor +"; color: " + inverseColor + ";}" +
+										".navbar-branded .navbar-nav > .active > a, .navbar-branded .navbar-nav > .active > a:hover, .navbar-branded .navbar-nav > .active > a:focus, .navbar-branded .navbar-nav > .open > a, .navbar-branded .navbar-nav > .open > a:hover,.navbar-branded .navbar-nav > .open > a:focus { background: " + brandColor + "; color: " + inverseColor + "; }" +
 										".navbar-branded .dropdown-menu > li > a:hover, .navbar-branded .dropdown-menu > li > a:focus { background: " + brandColor + "; color: " + inverseColor +"; }";
 
-										// TODO: write CSS for mobile menu button, lol
+										// TODO: write CSS for mobile menu button
 		writePageCss(navbarCss);
-	})
+	});
 
 
 	function writePageCss(content){
