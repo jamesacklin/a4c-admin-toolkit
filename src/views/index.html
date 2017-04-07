@@ -7,13 +7,29 @@ fabricator: true
 
 <h1>Overview</h1>
 
-<p>This UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
+<p>The Apps4Clubz Admin UI toolkit is a highly-modular design system for rapid web page development. It contains different materials that can be assembled into more complex page layouts.</p>
 
 <p>This guide contains real working examples, code snippets, documentation, and style guidelines.</p>
 
+<p>This UI toolkit is based on the <a href="https://getbootstrap.com/">Bootstrap</a> framework. At the time of its authoring, Bootstrap was up to version 3.3.7. Since the toolkit "extends" Bootstrap rather than including it, a developer can manage Bootstrap versions independently of this tookit—simply reference Bootstrap and the required libraries first, then include this toolkit. Compatibility with Bootstrap version 4 is untested.</p>
+
 <h2>Usage</h2>
 
-<p>Start by adding the following files to your page:</p>
+<p>Start by including the Bootstrap libraries and the necessary dependencies:</p>
+
+<p><span class="small">Bootstrap CSS (MaxCDN):</span></p>
+<pre class="language-markup"><code class="language-markup">&lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;
+</code></pre>
+
+<p><span class="small">jQuery (Google CDN):</span></p>
+<pre class="language-markup"><code class="language-markup">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p><span class="small">Bootstrap JS (MaxCDN):</span></p>
+<pre class="language-markup"><code class="language-markup">&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Then add the following files to your page:</p>
 
 <pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
 
