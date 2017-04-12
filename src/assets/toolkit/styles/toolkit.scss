@@ -75,7 +75,16 @@ body {
 		}
 
 		.navbar-nav {
-			margin: 7.5px -15px
+			margin: 7.5px -15px;
+			li.section-header {
+				padding-top: 7px;
+				padding-left: 7px;
+				padding-bottom: 7px;
+				text-transform: uppercase;
+				letter-spacing: 0.025em;
+				opacity: 0.8;
+				font-size: 0.8em;
+			}
 		}
 
 		.navbar-nav,
