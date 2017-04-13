@@ -15,6 +15,10 @@ fabricator: true
 
 <h2>Usage</h2>
 
+<hr>
+
+<h3>Library Dependencies</h5>
+
 <p>Start by including the Bootstrap libraries and the necessary dependencies:</p>
 
 <p><span class="small">Bootstrap CSS (MaxCDN):</span></p>
@@ -29,14 +33,22 @@ fabricator: true
 <pre class="language-markup"><code class="language-markup">&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"&gt;&lt;/script&gt;
 </code></pre>
 
-<p>Then add the following files to your page:</p>
+<h3>Toolkit CSS &amp; JS</h5>
 
-<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;assets/toolkit/styles/toolkit.css&quot;&gt;</code></pre>
+<p>Then, download the following files from the toolkit repository on GitHub:</p>
+<pre class="language-markup"><code class="language-markup">https://raw.githubusercontent.com/jamesacklin/a4c-admin-toolkit/gh-pages/assets/toolkit/styles/toolkit.css</code></pre>
+<pre class="language-markup"><code class="language-markup">https://raw.githubusercontent.com/jamesacklin/a4c-admin-toolkit/gh-pages/assets/toolkit/scripts/toolkit.js</code></pre>
 
-<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;assets/toolkit/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>Then add the toolkit files to your page:</p>
+
+<pre class="language-markup"><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;path/to/styles/toolkit.css&quot;&gt;</code></pre>
+
+<pre class="language-markup"><code class="language-markup">&lt;script src=&quot;path/to/scripts/toolkit.js&quot;&gt;&lt;/script&gt;</code></pre>
 
 
 <h2>Color</h2>
+
+<hr>
 
 {{#each toolkit.colors}}
 	<div class="f-color-chips">
@@ -50,6 +62,8 @@ fabricator: true
 {{/each}}
 
 <h2>Typography</h2>
+
+<hr>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam enim sunt sapiente molestias, sed dicta inventore consectetur beatae asperiores, aliquid laboriosam animi, praesentium repudiandae et, quam saepe sint cupiditate reiciendis.</p>
 
