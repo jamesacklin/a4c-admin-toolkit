@@ -1,6 +1,5 @@
 // Import fonts from Google CDN
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:400,400i,700,700i');
-
+@import url( 'https://fonts.googleapis.com/css?family=Roboto+Slab:300,400|Roboto:400,400i,700,700i');
 
 // Overwrite Bootstrap defaults
 $brand-primary: #219633;
@@ -8,20 +7,15 @@ $brand-success: #31D843;
 $brand-info: #3DD6D0;
 $brand-warning: #F9A03F;
 $brand-danger: #D66853;
-
 $font-family-sans-serif: 'Roboto', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-serif: 'Roboto Slab', Georgia, "Times New Roman", Times, serif;
-
 $headings-font-family: $font-family-serif;
 $headings-font-weight: 400;
-
-$border-radius-base: 0px;
-$border-radius-large: 0px;
-$border-radius-small: 0px;
-
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
 $dropdown-link-hover-color: #FFF;
 $dropdown-link-hover-bg: $brand-primary;
-
 $navbar-inverse-bg: $brand-primary;
 $navbar-inverse-color: #FFF;
 $navbar-inverse-link-color: #FFF;
@@ -30,11 +24,14 @@ $navbar-inverse-link-hover-color: #FFF;
 $navbar-inverse-link-disabled-color: darken($navbar-inverse-bg, 10%);
 $navbar-inverse-toggle-hover-bg: darken($navbar-inverse-bg, 10%);
 $navbar-inverse-toggle-border-color: darken($navbar-inverse-bg, 10%);
-
 $hr-border: #CCC;
+
+// More fun variables for us
+$white: #FFF;
 
 // Import vendor styles
 @import "vendor/_bootstrap.scss";
+@import "vendor/bootstrap/_panels.scss";
 
 // Custom styles
 body {
@@ -42,31 +39,34 @@ body {
 	line-height: 1.5;
 }
 
-.btn-primary { font-weight: bold; }
-
+.btn-primary {
+	font-weight: bold;
+}
 
 .navbar-vertical {
 	@media (min-width: $screen-sm) {
-
 		&.navbar-branded {
 			border-top: 1px solid $gray-lighter;
 		}
+
 		.navbar-collapse {
-		  height: auto;
-		  border-top: 0;
-		  box-shadow: none;
-		  max-height: none;
-		  padding-left:0;
-		  padding-right:0;
+			height       : auto;
+			border-top   : 0;
+			box-shadow   : none;
+			max-height   : none;
+			padding-left : 0;
+			padding-right: 0;
 		}
+
 		.navbar-collapse.collapse {
-		  display: block !important;
-		  width: auto !important;
-		  padding-bottom: 0;
-		  overflow: visible !important;
+			display       : block !important;
+			width         : auto !important;
+			padding-bottom: 0;
+			overflow      : visible !important;
 		}
+
 		.navbar-collapse.in {
-		  overflow-x: visible;
+			overflow-x: visible;
 		}
 
 		&.navbar {
@@ -76,26 +76,181 @@ body {
 
 		.navbar-nav {
 			margin: 7.5px -15px;
+
 			li.section-header {
-				padding-top: 7px;
-				padding-left: 7px;
+				padding-top   : 7px;
+				padding-left  : 7px;
 				padding-bottom: 7px;
 				text-transform: uppercase;
-				letter-spacing: 0.025em;
-				opacity: 0.8;
-				font-size: 0.8em;
+				letter-spacing: .025em;
+				opacity       : .8;
+				font-size     : .8em;
 			}
 		}
 
+		.navbar-header,
+		.navbar-left,
 		.navbar-nav,
 		.navbar-nav > li,
-		.navbar-left,
-		.navbar-right,
-		.navbar-header { float: none !important; }
-
-		.navbar-right .dropdown-menu {left:0;right:auto;}
-		.navbar-collapse .navbar-nav.navbar-right:last-child {
-		  margin-right: 0;
+		.navbar-right {
+			float: none !important;
 		}
+
+		.navbar-right .dropdown-menu {
+			left : 0;
+			right: auto;
+		}
+
+		.navbar-collapse .navbar-nav.navbar-right:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.card {
+	@extend .panel;
+	@extend .panel-default;
+
+	.card-header {
+		@extend .panel-heading;
+		background     : $white;
+		display        : flex;
+		justify-content: space-between;
+		align-items    : baseline;
+
+		.card-title {
+			font-weight: bold;
+			font-size  : 133%;
+		}
+
+		.card-header-actions {
+			align-self: flex-end;
+		}
+	}
+
+	.card-content {
+		@extend .panel-body;
+	}
+
+	.card-footer {
+		@extend .panel-footer;
+		font-size: 80%;
+	}
+}
+
+.data-grid {
+	display        : grid;
+	grid-column-gap: 15px;
+
+	dt {
+		text-transform: uppercase;
+		font-size     : .8em;
+		color         : inherit;
+	}
+
+	// We may want a horizontal layout for definition lists some day
+	// &.data-list dl {
+	// 	display    : flex;
+	// 	align-items: baseline;
+	//
+	// 	dt {
+	// 		margin-right: 10px;
+	// 	}
+	// }
+}
+
+.grid-xs-4 {
+	@media (min-width: $screen-xs) {
+		grid-template-columns: auto auto auto auto;
+	}
+}
+
+.grid-xs-3 {
+	@media (min-width: $screen-xs) {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+.grid-xs-2 {
+	@media (min-width: $screen-xs) {
+		grid-template-columns: auto auto;
+	}
+}
+
+.grid-xs-1 {
+	@media (min-width: $screen-xs) {
+		grid-template-columns: auto;
+	}
+}
+
+.grid-sm-4 {
+	@media (min-width: $screen-sm) {
+		grid-template-columns: auto auto auto auto;
+	}
+}
+
+.grid-sm-3 {
+	@media (min-width: $screen-sm) {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+.grid-sm-2 {
+	@media (min-width: $screen-sm) {
+		grid-template-columns: auto auto;
+	}
+}
+
+.grid-sm-1 {
+	@media (min-width: $screen-sm) {
+		grid-template-columns: auto;
+	}
+}
+
+.grid-md-4 {
+	@media (min-width: $screen-md) {
+		grid-template-columns: auto auto auto auto;
+	}
+}
+
+.grid-md-3 {
+	@media (min-width: $screen-md) {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+.grid-md-2 {
+	@media (min-width: $screen-md) {
+		grid-template-columns: auto auto;
+	}
+}
+
+.grid-md-1 {
+	@media (min-width: $screen-md) {
+		grid-template-columns: auto;
+	}
+}
+
+.grid-lg-4 {
+	@media (min-width: $screen-lg) {
+		grid-template-columns: auto auto auto auto;
+	}
+}
+
+.grid-lg-3 {
+	@media (min-width: $screen-lg) {
+		grid-template-columns: auto auto auto;
+	}
+}
+
+.grid-lg-2 {
+	@media (min-width: $screen-lg) {
+		grid-template-columns: auto auto;
+	}
+}
+
+.grid-lg-1 {
+	@media (min-width: $screen-lg) {
+		grid-template-columns: auto;
 	}
 }
