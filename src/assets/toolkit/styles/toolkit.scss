@@ -108,6 +108,7 @@ body {
 }
 
 .card {
+	// Basic card
 	@extend .panel;
 	@extend .panel-default;
 
@@ -136,6 +137,50 @@ body {
 		@extend .panel-footer;
 		font-size: 80%;
 	}
+
+	// Status cards
+	&.card-muted {
+		opacity: 0.5;
+	}
+
+	&.card-primary,
+	&.card-success,
+	&.card-info,
+	&.card-warning,
+	&.card-danger {
+		border-left-width: 10px;
+	}
+
+	&.card-primary {
+		border-left-color: $brand-primary;
+		.card-header { background: lighten($brand-primary, 55%); }
+		.card-title { color: $brand-primary; }
+	}
+
+	&.card-success {
+		border-left-color: $brand-success;
+		.card-header { background: lighten($brand-success, 45%); }
+		.card-title { color: $brand-success; }
+	}
+
+	&.card-info {
+		border-left-color: $brand-info;
+		.card-header { background: lighten($brand-info, 35%); }
+		.card-title { color: $brand-info; }
+	}
+
+	&.card-warning {
+		border-left-color: $brand-warning;
+		.card-header { background: lighten($brand-warning, 35%); }
+		.card-title { color: $brand-warning; }
+	}
+
+	&.card-danger {
+		border-left-color: $brand-danger;
+		.card-header { background: lighten($brand-danger, 35%); }
+		.card-title { color: $brand-danger; }
+	}
+
 }
 
 .data-grid {
