@@ -41,6 +41,11 @@ body {
 
 .btn-primary {
 	font-weight: bold;
+
+	.badge {
+		background: $white !important;
+		color     : $brand-primary !important;
+	}
 }
 
 .navbar-vertical {
@@ -355,5 +360,20 @@ body {
 .grid-lg-1 {
 	@media (min-width: $screen-lg) {
 		grid-template-columns: auto;
+	}
+}
+
+.memberRes {
+	@extend .btn;
+	@extend .btn-default;
+	@extend .btn-block;
+	text-align: left;
+
+	&[draggable="true"] {
+		&:before {
+			font-family: 'Glyphicons Halflings';
+			content    : "\e235";
+			color      : $gray-light;
+		}
 	}
 }
