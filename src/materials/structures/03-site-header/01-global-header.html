@@ -1,0 +1,16 @@
+---
+notes: |
+  Use this `.navbar` construct at the top of the page to establish a global header for the admin interface. The club name should be wrapped in a `.navbar-brand` link, which links back to root (or the home page). The payments and logout buttons are contained in a `.navbar-right` component, which pins them to the right on larger screens.
+
+  This `.navbar` component also contains a `.navbar-alert`, which you can use at your discretion to post notices to the very top of the page at a global level.
+---
+<div class="navbar navbar-default">
+  <div class="navbar-alert navbar-alert-muted">Global alert, if you need it</div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Club Stabertson</a>
+    <div class="navbar-right">
+      <a class="btn btn-link navbar-btn" title="Payment Info"><i class="fa fa-lg fa-credit-card"></i></a>
+      <a class="btn btn-link navbar-btn" title="Log Out"><i class="fa fa-lg fa-key"></i></a>&nbsp;
+    </div>
+  </div>
+</div>
