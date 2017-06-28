@@ -1,0 +1,10 @@
+---
+notes: |
+  To mimick Internet Explorer's "clear" button for search fields, add a `.has-clear` class to the parent `.input-group`, then include the `.form-control-clear` icon with all the requesite classes. JavaScript support for this interactivity is included in `toolkit.js`.
+---
+
+<div class="input-group has-clear">
+  <span class="input-group-addon"><i class="fa fa-search"></i></span>
+  <input type="search" class="form-control" placeholder="Filter Messages">
+  <i class="form-control-clear glyphicon glyphicon-remove text-muted form-control-feedback hidden"></i>
+</div>
