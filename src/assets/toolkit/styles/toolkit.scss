@@ -35,6 +35,11 @@ $white: #FFF;
 @import "vendor/bootstrap/_panels.scss";
 
 // Custom styles
+body,
+html {
+	overflow-y: hidden;
+}
+
 body {
 	font-size  : 16px;
 	line-height: 1.5;
