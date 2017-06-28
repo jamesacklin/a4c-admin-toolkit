@@ -88,9 +88,9 @@ body {
 				padding-left  : 7px;
 				padding-bottom: 7px;
 				text-transform: uppercase;
-				letter-spacing: .025em;
-				opacity       : .8;
-				font-size     : .8em;
+				letter-spacing: 0.025em;
+				opacity       : 0.8;
+				font-size     : 0.8em;
 			}
 		}
 
@@ -117,8 +117,8 @@ body {
 	background: $brand-primary;
 	color     : $white;
 	text-align: center;
-	font-size : .8em;
-	padding   : .5em 5%;
+	font-size : 0.8em;
+	padding   : 0.5em 5%;
 
 	a {
 		color          : $white;
@@ -167,8 +167,22 @@ body {
 		}
 	}
 
+	.nav-tabs {
+		background: lighten($gray-lighter, 3%);
+	}
+
+	.nav-tabs > li > a,
+	.nav-tabs > li.active > a {
+		border-top: none;
+	}
+
+	.nav-tabs > li:first-child.active > a {
+		border-left-color: transparent;
+	}
+
 	.card-header {
 		@extend .panel-heading;
+		border-bottom  : 1px solid #ddd !important;
 		background     : $white;
 		display        : flex;
 		justify-content: space-between;
@@ -182,6 +196,7 @@ body {
 		.card-header-actions {
 			align-self: flex-end;
 		}
+
 	}
 
 	.card-content {
@@ -195,7 +210,7 @@ body {
 
 	// Status cards
 	&.card-muted {
-		opacity: .5;
+		opacity: 0.5;
 	}
 
 	&.card-danger,
@@ -274,7 +289,7 @@ body {
 
 	dt {
 		text-transform: uppercase;
-		font-size     : .8em;
+		font-size     : 0.8em;
 		color         : inherit;
 	}
 

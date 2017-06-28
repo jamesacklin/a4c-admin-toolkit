@@ -242,6 +242,375 @@ fabricator: false
 	  </div>
 	</div>
 
+	<h2>Multi-Time Events</h2>
+	<hr>
+	<p>For events with multiple seating times, use the tab navigation between events. Essentially, capture everything for an event "seating time" as its own card, contained in a <code>.tab-pane</code>, but within the <code>.card</code> itself.</p>
+	<div class="card">
+	  <ul class="nav nav-tabs" role="tablist">
+	    <li role="presentation" class="active"><a href="#seating-time-1" role="tab" data-toggle="tab">Seating Time 1</a></li>
+	    <li role="presentation"><a href="#seating-time-2" role="tab" data-toggle="tab">Seating Time 2</a></li>
+	    <li role="presentation"><a href="#seating-time-3" role="tab" data-toggle="tab">Seating Time 3</a></li>
+	    <li role="presentation"><a href="#seating-time-4" role="tab" data-toggle="tab">Seating Time 4</a></li>
+	  </ul>
+	  <div class="tab-content">
+	    <div class="tab-pane active" id="seating-time-1">
+	      <div class="card-header">
+	      <div class="card-title">Multiple Seating Times</div>
+	      <div class="card-header-actions">
+	        <span>Total RSVPs: <span class="badge">40</span></span>
+	        <button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+	        <div class="btn-group">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a href="#">Edit</a></li>
+	            <li><a href="#">Delete</a></li>
+	            <li><a href="#">Send Reminder</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	    <div class="card-content">
+	      <blockquote>
+	        <p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+	      </blockquote>
+	      <div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+	        <dl>
+	          <dt>Location</dt>
+	          <dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+	        </dl>
+	        <dl>
+	          <dt>Start</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>End</dt>
+	          <dd>Mon, Dec 25 11:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>RSVP By</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>Display</dt>
+	          <dd>Friday, December 01</dd>
+	        </dl>
+	        <dl>
+	          <dt>Views</dt>
+	          <dd>6 </dd>
+	        </dl>
+	        <dl>
+	          <dt>Payments</dt>
+	          <dd>$35.00</dd>
+	        </dl>
+	      </div>
+	      <div class="rsvp-table collapse">
+	        <h3>RSVPs</h3>
+	        <p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+	        <table class="table table-bordered table-responsive">
+	          <thead>
+	            <th>Pending <span class="badge">0</span></th>
+	            <th>Updating <span class="badge">0</span></th>
+	            <th>Confirmed <span class="badge">2</span></th>
+	            <th>Denied <span class="badge">0</span></th>
+	            <th>Cancelled <span class="badge">0</span></th>
+	            <th>Wait List <span class="badge">0</span></th>
+	            <th>Payment Declined <span class="badge">0</span></th>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td></td>
+	              <td></td>
+	              <td>
+	                <div class="memberRes" draggable="true">
+	                  Staley, Mike (19896) (2)
+	                </div>
+	                <div class="memberRes" draggable="true">
+	                  Anderson, Tom (19896) (5)
+	                </div>
+	              </td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	    </div>
+	    <div class="tab-pane" id="seating-time-2">
+	      <div class="card-header">
+	      <div class="card-title">Multiple Seating Times</div>
+	      <div class="card-header-actions">
+	        <span>Total RSVPs: <span class="badge">40</span></span>
+	        <button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+	        <div class="btn-group">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a href="#">Edit</a></li>
+	            <li><a href="#">Delete</a></li>
+	            <li><a href="#">Send Reminder</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	      <div class="card-content">
+	      <blockquote>
+	        <p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+	      </blockquote>
+	      <div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+	        <dl>
+	          <dt>Location</dt>
+	          <dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+	        </dl>
+	        <dl>
+	          <dt>Start</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>End</dt>
+	          <dd>Mon, Dec 25 11:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>RSVP By</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>Display</dt>
+	          <dd>Friday, December 01</dd>
+	        </dl>
+	        <dl>
+	          <dt>Views</dt>
+	          <dd>6 </dd>
+	        </dl>
+	        <dl>
+	          <dt>Payments</dt>
+	          <dd>$35.00</dd>
+	        </dl>
+	      </div>
+	      <div class="rsvp-table collapse">
+	        <h3>RSVPs</h3>
+	        <p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+	        <table class="table table-bordered table-responsive">
+	          <thead>
+	            <th>Pending <span class="badge">0</span></th>
+	            <th>Updating <span class="badge">0</span></th>
+	            <th>Confirmed <span class="badge">2</span></th>
+	            <th>Denied <span class="badge">0</span></th>
+	            <th>Cancelled <span class="badge">0</span></th>
+	            <th>Wait List <span class="badge">0</span></th>
+	            <th>Payment Declined <span class="badge">0</span></th>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td></td>
+	              <td></td>
+	              <td>
+	                <div class="memberRes" draggable="true">
+	                  Staley, Mike (19896) (2)
+	                </div>
+	                <div class="memberRes" draggable="true">
+	                  Anderson, Tom (19896) (5)
+	                </div>
+	              </td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	    </div>
+	    <div class="tab-pane" id="seating-time-3">
+	      <div class="card-header">
+	      <div class="card-title">Multiple Seating Times</div>
+	      <div class="card-header-actions">
+	        <span>Total RSVPs: <span class="badge">40</span></span>
+	        <button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+	        <div class="btn-group">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a href="#">Edit</a></li>
+	            <li><a href="#">Delete</a></li>
+	            <li><a href="#">Send Reminder</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	      <div class="card-content">
+	      <blockquote>
+	        <p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+	      </blockquote>
+	      <div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+	        <dl>
+	          <dt>Location</dt>
+	          <dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+	        </dl>
+	        <dl>
+	          <dt>Start</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>End</dt>
+	          <dd>Mon, Dec 25 11:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>RSVP By</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>Display</dt>
+	          <dd>Friday, December 01</dd>
+	        </dl>
+	        <dl>
+	          <dt>Views</dt>
+	          <dd>6 </dd>
+	        </dl>
+	        <dl>
+	          <dt>Payments</dt>
+	          <dd>$35.00</dd>
+	        </dl>
+	      </div>
+	      <div class="rsvp-table collapse">
+	        <h3>RSVPs</h3>
+	        <p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+	        <table class="table table-bordered table-responsive">
+	          <thead>
+	            <th>Pending <span class="badge">0</span></th>
+	            <th>Updating <span class="badge">0</span></th>
+	            <th>Confirmed <span class="badge">2</span></th>
+	            <th>Denied <span class="badge">0</span></th>
+	            <th>Cancelled <span class="badge">0</span></th>
+	            <th>Wait List <span class="badge">0</span></th>
+	            <th>Payment Declined <span class="badge">0</span></th>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td></td>
+	              <td></td>
+	              <td>
+	                <div class="memberRes" draggable="true">
+	                  Staley, Mike (19896) (2)
+	                </div>
+	                <div class="memberRes" draggable="true">
+	                  Anderson, Tom (19896) (5)
+	                </div>
+	              </td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	    </div>
+	    <div class="tab-pane" id="seating-time-4">
+	      <div class="card-header">
+	      <div class="card-title">Multiple Seating Times</div>
+	      <div class="card-header-actions">
+	        <span>Total RSVPs: <span class="badge">40</span></span>
+	        <button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+	        <div class="btn-group">
+	          <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+	          <ul class="dropdown-menu dropdown-menu-right">
+	            <li><a href="#">Edit</a></li>
+	            <li><a href="#">Delete</a></li>
+	            <li><a href="#">Send Reminder</a></li>
+	          </ul>
+	        </div>
+	      </div>
+	    </div>
+	      <div class="card-content">
+	      <blockquote>
+	        <p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+	      </blockquote>
+	      <div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+	        <dl>
+	          <dt>Location</dt>
+	          <dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+	        </dl>
+	        <dl>
+	          <dt>Start</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>End</dt>
+	          <dd>Mon, Dec 25 11:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>RSVP By</dt>
+	          <dd>Mon, Dec 25 6:00 PM</dd>
+	        </dl>
+	        <dl>
+	          <dt>Display</dt>
+	          <dd>Friday, December 01</dd>
+	        </dl>
+	        <dl>
+	          <dt>Views</dt>
+	          <dd>6 </dd>
+	        </dl>
+	        <dl>
+	          <dt>Payments</dt>
+	          <dd>$35.00</dd>
+	        </dl>
+	      </div>
+	      <div class="rsvp-table collapse">
+	        <h3>RSVPs</h3>
+	        <p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+	        <table class="table table-bordered table-responsive">
+	          <thead>
+	            <th>Pending <span class="badge">0</span></th>
+	            <th>Updating <span class="badge">0</span></th>
+	            <th>Confirmed <span class="badge">2</span></th>
+	            <th>Denied <span class="badge">0</span></th>
+	            <th>Cancelled <span class="badge">0</span></th>
+	            <th>Wait List <span class="badge">0</span></th>
+	            <th>Payment Declined <span class="badge">0</span></th>
+	          </thead>
+	          <tbody>
+	            <tr>
+	              <td></td>
+	              <td></td>
+	              <td>
+	                <div class="memberRes" draggable="true">
+	                  Staley, Mike (19896) (2)
+	                </div>
+	                <div class="memberRes" draggable="true">
+	                  Anderson, Tom (19896) (5)
+	                </div>
+	              </td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	              <td></td>
+	            </tr>
+	          </tbody>
+	        </table>
+	      </div>
+	    </div>
+	    </div>
+	  </div>
+	  <div class="card-footer">
+	    <div class="card-footer-actions">
+	      <button class="btn btn-default">Edit</button>
+	      <button class="btn btn-default">Delete</button>
+	      <button class="btn btn-default">Send Reminder</button>
+	    </div>
+	  </div>
+	</div>
+
 	<h2>Messages</h2>
 	<hr>
 	<p>Messages have a title (housed in the card title), the message body (contained in a <code>&lt;blockquote&gt;</code>), and a data grid showing some meta elements.</p>
