@@ -455,3 +455,34 @@ body {
 		background     : $brand-primary;
 	}
 }
+
+.admin-section-header {
+	.btn-toolbar {
+		display: block;
+		float  : none;
+
+		.btn-group {
+			margin-bottom: 0.5em;
+
+			.btn {
+				display: block;
+			}
+		}
+		@media (min-width: $screen-md) {
+			float      : right;
+			display    : flex;
+			align-items: center;
+
+			.input-group {
+				width: 250px;
+			}
+
+			.btn-group {
+				.btn {
+					display: inline-block;
+				}
+				margin-bottom: 0;
+			}
+		}
+	}
+}
