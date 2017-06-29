@@ -27,9 +27,7 @@ var config = {
 		},
 		styles: {
 			fabricator: 'src/assets/fabricator/styles/fabricator.scss',
-			toolkit: 'src/assets/toolkit/styles/toolkit.scss',
-			ltr: 'src/assets/toolkit/styles/ltr.scss',
-			rtl: 'src/assets/toolkit/styles/rtl.scss'
+			toolkit: 'src/assets/toolkit/styles/toolkit.scss'
 		},
 		images: 'src/assets/toolkit/images/**/*',
 		views: 'src/toolkit/views/*.html'
@@ -53,8 +51,8 @@ gulp.task('clean', function (cb) {
 gulp.task('styles:fabricator', function () {
 	gulp.src(config.src.styles.fabricator)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
+		.pipe(prefix('last 2 versions'))
+		// .pipe(gulpif(!config.dev, csso()))
 		.pipe(rename('f.css'))
 		.pipe(gulp.dest(config.dest + '/assets/fabricator/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
@@ -63,31 +61,13 @@ gulp.task('styles:fabricator', function () {
 gulp.task('styles:toolkit', function () {
 	gulp.src(config.src.styles.toolkit)
 		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
+		.pipe(prefix('last 2 versions'))
+		// .pipe(gulpif(!config.dev, csso()))
 		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
 		.pipe(gulpif(config.dev, reload({stream:true})));
 });
 
-gulp.task('styles:ltr', function () {
-	gulp.src(config.src.styles.ltr)
-		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
-		.pipe(gulpif(config.dev, reload({stream:true})));
-});
-
-gulp.task('styles:rtl', function () {
-	gulp.src(config.src.styles.rtl)
-		.pipe(sass().on('error', sass.logError))
-		.pipe(prefix('last 1 version'))
-		.pipe(gulpif(!config.dev, csso()))
-		.pipe(gulp.dest(config.dest + '/assets/toolkit/styles'))
-		.pipe(gulpif(config.dev, reload({stream:true})));
-});
-
-gulp.task('styles', ['styles:fabricator', 'styles:toolkit', 'styles:ltr', 'styles:rtl']);
+gulp.task('styles', ['styles:fabricator', 'styles:toolkit']);
 
 
 // scripts
@@ -167,12 +147,6 @@ gulp.task('serve', function () {
 
 	gulp.task('styles:toolkit:watch', ['styles:toolkit']);
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
-
-	gulp.task('styles:ltr:watch', ['styles:ltr']);
-	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:ltr:watch']);
-
-	gulp.task('styles:rtl:watch', ['styles:rtl']);
-	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:rtl:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
 	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);

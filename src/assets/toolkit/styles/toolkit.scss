@@ -93,9 +93,9 @@ body {
 				padding-left  : 7px;
 				padding-bottom: 7px;
 				text-transform: uppercase;
-				letter-spacing: 0.025em;
-				opacity       : 0.8;
-				font-size     : 0.8em;
+				letter-spacing: .025em;
+				opacity       : .8;
+				font-size     : .8em;
 			}
 		}
 
@@ -122,8 +122,8 @@ body {
 	background: $brand-primary;
 	color     : $white;
 	text-align: center;
-	font-size : 0.8em;
-	padding   : 0.5em 5%;
+	font-size : .8em;
+	padding   : .5em 5%;
 
 	a {
 		color          : $white;
@@ -215,7 +215,7 @@ body {
 
 	// Status cards
 	&.card-muted {
-		opacity: 0.5;
+		opacity: .5;
 	}
 
 	&.card-danger,
@@ -289,13 +289,17 @@ body {
 }
 
 .data-grid {
-	display        : grid;
-	grid-column-gap: 15px;
+	display  : flex;
+	flex-wrap: wrap;
 
 	dt {
 		text-transform: uppercase;
-		font-size     : 0.8em;
+		font-size     : .8em;
 		color         : inherit;
+	}
+
+	dl {
+		padding: 8px;
 	}
 
 	// We may want a horizontal layout for definition lists some day
@@ -311,115 +315,153 @@ body {
 
 .grid-xs-4 {
 	@media (min-width: $screen-xs) {
-		grid-template-columns: auto auto auto auto;
+		dl {
+			width: 25%;
+		}
 	}
 }
 
 .grid-xs-3 {
 	@media (min-width: $screen-xs) {
-		grid-template-columns: auto auto auto;
+		dl {
+			width: 33.333%;
+		}
 	}
 }
 
 .grid-xs-2 {
 	@media (min-width: $screen-xs) {
-		grid-template-columns: auto auto;
+		dl {
+			width: 50%;
+		}
 	}
 }
 
 .grid-xs-1 {
 	@media (min-width: $screen-xs) {
-		grid-template-columns: auto;
+		dl {
+			width: 100%;
+		}
 	}
 }
 
 .grid-sm-5 {
 	@media (min-width: $screen-sm) {
-		grid-template-columns: auto auto auto auto auto;
+		dl {
+			width: 20%;
+		}
 	}
 }
 
 .grid-sm-4 {
 	@media (min-width: $screen-sm) {
-		grid-template-columns: auto auto auto auto;
+		dl {
+			width: 25%;
+		}
 	}
 }
 
 .grid-sm-3 {
 	@media (min-width: $screen-sm) {
-		grid-template-columns: auto auto auto;
+		dl {
+			width: 33.3333%;
+		}
 	}
 }
 
 .grid-sm-2 {
 	@media (min-width: $screen-sm) {
-		grid-template-columns: auto auto;
+		dl {
+			width: 50%;
+		}
 	}
 }
 
 .grid-sm-1 {
 	@media (min-width: $screen-sm) {
-		grid-template-columns: auto;
+		dl {
+			width: 100%;
+		}
 	}
 }
 
 .grid-md-5 {
 	@media (min-width: $screen-md) {
-		grid-template-columns: auto auto auto auto auto;
+		dl {
+			width: 20%;
+		}
 	}
 }
 
 .grid-md-4 {
 	@media (min-width: $screen-md) {
-		grid-template-columns: auto auto auto auto;
+		dl {
+			width: 25%;
+		}
 	}
 }
 
 .grid-md-3 {
 	@media (min-width: $screen-md) {
-		grid-template-columns: auto auto auto;
+		dl {
+			width: 33.3333%;
+		}
 	}
 }
 
 .grid-md-2 {
 	@media (min-width: $screen-md) {
-		grid-template-columns: auto auto;
+		dl {
+			width: 50%;
+		}
 	}
 }
 
 .grid-md-1 {
 	@media (min-width: $screen-md) {
-		grid-template-columns: auto;
+		dl {
+			width: 100%;
+		}
 	}
 }
 
 .grid-lg-5 {
 	@media (min-width: $screen-lg) {
-		grid-template-columns: auto auto auto auto auto;
+		dl {
+			width: 20%;
+		}
 	}
 }
 
 .grid-lg-4 {
 	@media (min-width: $screen-lg) {
-		grid-template-columns: auto auto auto auto;
+		dl {
+			width: 25%;
+		}
 	}
 }
 
 .grid-lg-3 {
 	@media (min-width: $screen-lg) {
-		grid-template-columns: auto auto auto;
+		dl {
+			width: 33.3333%;
+		}
 	}
 }
 
 .grid-lg-2 {
 	@media (min-width: $screen-lg) {
-		grid-template-columns: auto auto;
+		dl {
+			width: 50%;
+		}
 	}
 }
 
 .grid-lg-1 {
 	@media (min-width: $screen-lg) {
-		grid-template-columns: auto;
+		dl {
+			width: 100%;
+		}
 	}
 }
 
@@ -462,7 +504,7 @@ body {
 		float  : none;
 
 		.btn-group {
-			margin-bottom: 0.5em;
+			margin-bottom: .5em;
 
 			.btn {
 				display: block;
