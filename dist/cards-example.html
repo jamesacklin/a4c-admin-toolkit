@@ -1,0 +1,730 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Card Examples</title>
+
+	
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+	<!-- toolkit styles -->
+	<link rel="stylesheet" href="assets/toolkit/styles/toolkit.css">
+	<!-- /toolkit styles -->
+
+</head>
+<body>
+
+
+
+	
+<div class="jumbotron">
+	<div class="container container-fluid">
+		<h1>Card Examples</h1>
+		<p>These are some example uses for cards with the different data types that exist in the admin app today. You'll notice that each card uses a different combination of content elements—mostly combinations of raw paragraphs, data grids, and tables. Some
+			cards, like the Event card, have advanced functionality and interactivity built into them.</p>
+		<p><a class="btn btn-primary btn-lg" href="structures.html#02-cards">Back to Toolkit</a></p>
+	</div>
+</div>
+
+<div class="container container-fluid">
+
+	<h2>Course Conditions</h2>
+	<hr>
+	<p>Course conditions are perhaps the most straightforward card—they only contain a data grid of labels and values.</p>
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">Friday, June 16</div>
+			<div class="card-header-actions">
+				<div class="btn-group">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	        </a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">Delete</a></li>
+						<li><a href="#">Send Reminder</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-content">
+			<div class="data-grid grid-xs-1 grid-sm-2 grid-md-3 grid-lg-4">
+				<dl>
+					<dt>Pin Placement</dt>
+					<dd>Just off the back of the green</dd>
+				</dl>
+				<dl>
+					<dt>Cart Rules</dt>
+					<dd>90 Degree</dd>
+				</dl>
+				<dl>
+					<dt>Play Rules</dt>
+					<dd>Summer Rules</dd>
+				</dl>
+				<dl>
+					<dt>Comments</dt>
+					<dd>Alligator seen on 7th fairway, be careful.</dd>
+				</dl>
+				<dl>
+					<dt>Beverage Cart</dt>
+					<dd>On Course</dd>
+				</dl>
+				<dl>
+					<dt>Halfway House</dt>
+					<dd>Open</dd>
+				</dl>
+				<dl>
+					<dt>Practice Facilities</dt>
+					<dd>Open</dd>
+				</dl>
+				<dl>
+					<dt>Tee Time URL</dt>
+					<dd>http://www.apps4clubz.com</dd>
+				</dl>
+				<dl>
+					<dt>For Date</dt>
+					<dd>Tuesday, May 23</dd>
+				</dl>
+				<dl>
+					<dt>Posted by</dt>
+					<dd>Staley, Mike</dd>
+				</dl>
+				<dl>
+					<dt>Views</dt>
+					<dd>1</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="card-footer">
+			<div class="card-footer-actions">
+				<button class="btn btn-default">Edit</button>
+				<button class="btn btn-default">Delete</button>
+				<button class="btn btn-default">Send Reminder</button>
+			</div>
+		</div>
+	</div>
+
+	<h2>Daily Specials</h2>
+	<hr>
+	<p>Daily specials have a title (housed in the card title), a message body (contained in a <code>&lt;blockquote&gt;</code>), and a data grid showing some meta elements.</p>
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">Yummy Stuff</div>
+			<div class="card-header-actions">
+				<div class="btn-group">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	        </a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">Delete</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-content">
+			<blockquote>
+				<p><strong>Appetizer:</strong><br>Caramelized Onion, Chorizo, and White Bean Dip $11<br>Served chilled with grilled baguette</p>
+				<p><strong>Petite Entree:</strong><br>Seared Skate Fillet $19<br>Broccolini, balsamic roasted peppers and fresh lemon</p>
+				<p><strong>Entree</strong><br>Honey Glazed Boneless Pork Chop $23<br>Grilled and glazed pork chop, potato and corn hash, broccolini, and balsamic roasted peppers</p>
+				<p><strong>Seared Sea Scallops $31</strong><br>Marinated soba noodles, edamame cucumber salad, soy sauce, wasabi, and sriracha<br></p>
+				<p><strong>Chef's Daily Steak Feature:</strong><br>Grilled Tomahawk Steak $85<br>4oz Tomahawk steak served with choice of soup or salad, and two a la carte sides</p>
+			</blockquote>
+			<div class="data-grid grid-xs-1 grid-sm-2 grid-md-3 grid-lg-4">
+				<dl>
+					<dt>Display Date</dt>
+					<dd>Thursday, June 01</dd>
+				</dl>
+				<dl>
+					<dt>Display Until</dt>
+					<dd>Saturday, June 10</dd>
+				</dl>
+				<dl>
+					<dt>Posted By</dt>
+					<dd>Staley, Mike</dd>
+				</dl>
+				<dl>
+					<dt>Views</dt>
+					<dd>22</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="card-footer">
+			<div class="card-footer-actions">
+				<button class="btn btn-default">Edit</button>
+				<button class="btn btn-default">Delete</button>
+			</div>
+		</div>
+	</div>
+
+
+	<h2>Events</h2>
+	<hr>
+	<p>Events have an event title (housed in the card title), an event description (contained in a <code>&lt;blockquote&gt;</code>), and a data grid showing some meta elements.</p>
+	<p>Events also contain a collapsing table showing the various RSVP statuses of club members who have responded. The user can change club members' RSVP statuses by dragging and dropping between columns. <em class="text-muted">Planned for on small screens, the user can change club members' statuses by tapping on a member's name and selecting a new RSVP status via a dropdown menu.</em></p>
+	<p>If the Payments module is enabled, arrange the data grid with 4 columns at medium and large breakpoints (<code>.grid-md-4</code>, <code>.grid-lg-4</code>).</p>
+	<div class="card">
+		<div class="card-header">
+			<div class="card-title">Set for Christmas, 2017</div>
+			<div class="card-header-actions">
+				<button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">7</span></button>
+				<div class="btn-group">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	        </a>
+					<ul class="dropdown-menu dropdown-menu-right">
+						<li><a href="#">Edit</a></li>
+						<li><a href="#">Delete</a></li>
+						<li><a href="#">Send Reminder</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card-content">
+			<blockquote>
+				<p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+			</blockquote>
+			<div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+				<dl>
+					<dt>Location</dt>
+					<dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+				</dl>
+				<dl>
+					<dt>Start</dt>
+					<dd>Mon, Dec 25 6:00 PM</dd>
+				</dl>
+				<dl>
+					<dt>End</dt>
+					<dd>Mon, Dec 25 11:00 PM</dd>
+				</dl>
+				<dl>
+					<dt>RSVP By</dt>
+					<dd>Mon, Dec 25 6:00 PM</dd>
+				</dl>
+				<dl>
+					<dt>Display</dt>
+					<dd>Friday, December 01</dd>
+				</dl>
+				<dl>
+					<dt>Views</dt>
+					<dd>6 </dd>
+				</dl>
+				<dl>
+					<dt>Payments</dt>
+					<dd>$35.00</dd>
+				</dl>
+			</div>
+			<div class="rsvp-table collapse">
+				<h3>RSVPs</h3>
+				<p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+				<table class="table table-bordered table-responsive">
+					<thead>
+						<th>Pending <span class="badge">0</span></th>
+						<th>Updating <span class="badge">0</span></th>
+						<th>Confirmed <span class="badge">2</span></th>
+						<th>Denied <span class="badge">0</span></th>
+						<th>Cancelled <span class="badge">0</span></th>
+						<th>Wait List <span class="badge">0</span></th>
+						<th>Payment Declined <span class="badge">0</span></th>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td></td>
+							<td>
+								<div class="memberRes" draggable="true">
+									Staley, Mike (19896) (2)
+								</div>
+								<div class="memberRes" draggable="true">
+									Anderson, Tom (19896) (5)
+								</div>
+							</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="card-footer">
+			<div class="card-footer-actions">
+				<button class="btn btn-default">Edit</button>
+				<button class="btn btn-default">Delete</button>
+				<button class="btn btn-default">Send Reminder</button>
+			</div>
+		</div>
+	</div>
+
+	<h2>Multi-Time Events</h2>
+	<hr>
+	<p>For events with multiple seating times, use the tab navigation between events. Essentially, capture everything for an event "seating time" as its own card, contained in a <code>.tab-pane</code>, but within the <code>.card</code> itself.</p>
+	<div class="card">
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#seating-time-1" role="tab" data-toggle="tab">Seating Time 1</a></li>
+			<li role="presentation"><a href="#seating-time-2" role="tab" data-toggle="tab">Seating Time 2</a></li>
+			<li role="presentation"><a href="#seating-time-3" role="tab" data-toggle="tab">Seating Time 3</a></li>
+			<li role="presentation"><a href="#seating-time-4" role="tab" data-toggle="tab">Seating Time 4</a></li>
+		</ul>
+		<div class="tab-content">
+			<div class="tab-pane active" id="seating-time-1">
+				<div class="card-header">
+					<div class="card-title">Multiple Seating Times</div>
+					<div class="card-header-actions">
+						<span>Total RSVPs <span class="badge">40</span></span>
+						<button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+						<div class="btn-group">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Edit This Time</a></li>
+								<li><a href="#">Delete This Time</a></li>
+								<li><a href="#">Send Reminder About This Time</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-content">
+					<blockquote>
+						<p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+					</blockquote>
+					<div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+						<dl>
+							<dt>Location</dt>
+							<dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+						</dl>
+						<dl>
+							<dt>Start</dt>
+							<dd>Mon, Dec 25 6:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>End</dt>
+							<dd>Mon, Dec 25 11:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>RSVP By</dt>
+							<dd>Mon, Dec 25 6:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>Display</dt>
+							<dd>Friday, December 01</dd>
+						</dl>
+						<dl>
+							<dt>Views</dt>
+							<dd>6 </dd>
+						</dl>
+						<dl>
+							<dt>Payments</dt>
+							<dd>$35.00</dd>
+						</dl>
+					</div>
+					<div class="rsvp-table collapse">
+						<h3>RSVPs</h3>
+						<p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+						<table class="table table-bordered table-responsive">
+							<thead>
+								<th>Pending <span class="badge">0</span></th>
+								<th>Updating <span class="badge">0</span></th>
+								<th>Confirmed <span class="badge">2</span></th>
+								<th>Denied <span class="badge">0</span></th>
+								<th>Cancelled <span class="badge">0</span></th>
+								<th>Wait List <span class="badge">0</span></th>
+								<th>Payment Declined <span class="badge">0</span></th>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="memberRes" draggable="true">
+											Staley, Mike (19896) (2)
+										</div>
+										<div class="memberRes" draggable="true">
+											Anderson, Tom (19896) (5)
+										</div>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-footer">
+			    <div class="card-footer-actions">
+						<button class="btn btn-default">Edit This Time</button>
+			      <button class="btn btn-default">Delete This Time</button>
+			      <button class="btn btn-default">Send Reminder About This Time</button>
+			    </div>
+			  </div>
+			</div>
+			<div class="tab-pane" id="seating-time-2">
+				<div class="card-header">
+					<div class="card-title">Multiple Seating Times</div>
+					<div class="card-header-actions">
+						<span>Total RSVPs <span class="badge">40</span></span>
+						<button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+						<div class="btn-group">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Edit This Time</a></li>
+								<li><a href="#">Delete This Time</a></li>
+								<li><a href="#">Send Reminder About This Time</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-content">
+					<blockquote>
+						<p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+					</blockquote>
+					<div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+						<dl>
+							<dt>Location</dt>
+							<dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+						</dl>
+						<dl>
+							<dt>Start</dt>
+							<dd>Mon, Dec 25 6:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>End</dt>
+							<dd>Mon, Dec 25 11:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>RSVP By</dt>
+							<dd>Mon, Dec 25 6:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>Display</dt>
+							<dd>Friday, December 01</dd>
+						</dl>
+						<dl>
+							<dt>Views</dt>
+							<dd>6 </dd>
+						</dl>
+						<dl>
+							<dt>Payments</dt>
+							<dd>$35.00</dd>
+						</dl>
+					</div>
+					<div class="rsvp-table collapse">
+						<h3>RSVPs</h3>
+						<p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+						<table class="table table-bordered table-responsive">
+							<thead>
+								<th>Pending <span class="badge">0</span></th>
+								<th>Updating <span class="badge">0</span></th>
+								<th>Confirmed <span class="badge">2</span></th>
+								<th>Denied <span class="badge">0</span></th>
+								<th>Cancelled <span class="badge">0</span></th>
+								<th>Wait List <span class="badge">0</span></th>
+								<th>Payment Declined <span class="badge">0</span></th>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="memberRes" draggable="true">
+											Staley, Mike (19896) (2)
+										</div>
+										<div class="memberRes" draggable="true">
+											Anderson, Tom (19896) (5)
+										</div>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-footer">
+			    <div class="card-footer-actions">
+						<button class="btn btn-default">Edit This Time</button>
+			      <button class="btn btn-default">Delete This Time</button>
+			      <button class="btn btn-default">Send Reminder About This Time</button>
+			    </div>
+			  </div>
+			</div>
+			<div class="tab-pane" id="seating-time-3">
+				<div class="card-header">
+					<div class="card-title">Multiple Seating Times</div>
+					<div class="card-header-actions">
+						<span>Total RSVPs <span class="badge">40</span></span>
+						<button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+						<div class="btn-group">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Edit This Time</a></li>
+								<li><a href="#">Delete This Time</a></li>
+								<li><a href="#">Send Reminder About This Time</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-content">
+					<blockquote>
+						<p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+					</blockquote>
+					<div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+						<dl>
+							<dt>Location</dt>
+							<dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+						</dl>
+						<dl>
+							<dt>Start</dt>
+							<dd>Mon, Dec 25 6:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>End</dt>
+							<dd>Mon, Dec 25 11:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>RSVP By</dt>
+							<dd>Mon, Dec 25 6:00 PM</dd>
+						</dl>
+						<dl>
+							<dt>Display</dt>
+							<dd>Friday, December 01</dd>
+						</dl>
+						<dl>
+							<dt>Views</dt>
+							<dd>6 </dd>
+						</dl>
+						<dl>
+							<dt>Payments</dt>
+							<dd>$35.00</dd>
+						</dl>
+					</div>
+					<div class="rsvp-table collapse">
+						<h3>RSVPs</h3>
+						<p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+						<table class="table table-bordered table-responsive">
+							<thead>
+								<th>Pending <span class="badge">0</span></th>
+								<th>Updating <span class="badge">0</span></th>
+								<th>Confirmed <span class="badge">2</span></th>
+								<th>Denied <span class="badge">0</span></th>
+								<th>Cancelled <span class="badge">0</span></th>
+								<th>Wait List <span class="badge">0</span></th>
+								<th>Payment Declined <span class="badge">0</span></th>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td></td>
+									<td>
+										<div class="memberRes" draggable="true">
+											Staley, Mike (19896) (2)
+										</div>
+										<div class="memberRes" draggable="true">
+											Anderson, Tom (19896) (5)
+										</div>
+									</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="card-footer">
+			    <div class="card-footer-actions">
+			      <button class="btn btn-default">Edit This Time</button>
+			      <button class="btn btn-default">Delete This Time</button>
+			      <button class="btn btn-default">Send Reminder About This Time</button>
+			    </div>
+			  </div>
+			</div>
+			<div class="tab-pane" id="seating-time-4">
+				<div class="card-header">
+					<div class="card-title">Multiple Seating Times</div>
+					<div class="card-header-actions">
+						<span>Total RSVPs <span class="badge">40</span></span>
+						<button class="btn btn-primary dropdown-toggle" data-toggle="collapse" href=".rsvp-table">RSVPs <span class="badge">10</span></button>
+						<div class="btn-group">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	            <i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+	          </a>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li><a href="#">Edit This Time</a></li>
+								<li><a href="#">Delete This Time</a></li>
+								<li><a href="#">Send Reminder About This Time</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-content">
+						<blockquote>
+							<p>Description for event. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta expedita alias obcaecati totam distinctio laboriosam, ut culpa quia aperiam aspernatur dolores quod iusto delectus natus tempora in, nulla, quisquam eveniet.</p>
+						</blockquote>
+						<div class="data-grid grid-xs-1 grid-sm-2 grid-md-4 grid-lg-4">
+							<dl>
+								<dt>Location</dt>
+								<dd>Staley Compound<br>101 Fan Court<br>Sewickley, Pennsylvania 15143</dd>
+							</dl>
+							<dl>
+								<dt>Start</dt>
+								<dd>Mon, Dec 25 6:00 PM</dd>
+							</dl>
+							<dl>
+								<dt>End</dt>
+								<dd>Mon, Dec 25 11:00 PM</dd>
+							</dl>
+							<dl>
+								<dt>RSVP By</dt>
+								<dd>Mon, Dec 25 6:00 PM</dd>
+							</dl>
+							<dl>
+								<dt>Display</dt>
+								<dd>Friday, December 01</dd>
+							</dl>
+							<dl>
+								<dt>Views</dt>
+								<dd>6 </dd>
+							</dl>
+							<dl>
+								<dt>Payments</dt>
+								<dd>$35.00</dd>
+							</dl>
+						</div>
+						<div class="rsvp-table collapse">
+							<h3>RSVPs</h3>
+							<p><small class="text-muted"><em>Drag club members between columns to change their RSVP status.</em></small></p>
+							<table class="table table-bordered table-responsive">
+								<thead>
+									<th>Pending <span class="badge">0</span></th>
+									<th>Updating <span class="badge">0</span></th>
+									<th>Confirmed <span class="badge">2</span></th>
+									<th>Denied <span class="badge">0</span></th>
+									<th>Cancelled <span class="badge">0</span></th>
+									<th>Wait List <span class="badge">0</span></th>
+									<th>Payment Declined <span class="badge">0</span></th>
+								</thead>
+								<tbody>
+									<tr>
+										<td></td>
+										<td></td>
+										<td>
+											<div class="memberRes" draggable="true">
+												Staley, Mike (19896) (2)
+											</div>
+											<div class="memberRes" draggable="true">
+												Anderson, Tom (19896) (5)
+											</div>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				<div class="card-footer">
+					<div class="card-footer-actions">
+						<button class="btn btn-default">Edit This Time</button>
+						<button class="btn btn-default">Delete This Time</button>
+						<button class="btn btn-default">Send Reminder About This Time</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<h2>Messages</h2>
+		<hr>
+		<p>Messages have a title (housed in the card title), the message body (contained in a <code>&lt;blockquote&gt;</code>), and a data grid showing some meta elements.</p>
+		<p>If the Payments module is enabled, arrange the data grid with 3 columns at medium breakpoints (<code>.grid-md-3</code>) and 5 columns at large breakpoints (<code>.grid-lg-5</code>).</p>
+		<div class="card">
+			<div class="card-header">
+				<div class="card-title">Message Title</div>
+				<div class="card-header-actions">
+					<div class="btn-group">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="glyphicon glyphicon glyphicon-option-vertical"></i></span>
+					</a>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li><a href="#">Edit</a></li>
+							<li><a href="#">Copy</a></li>
+							<li><a href="#">Delete</a></li>
+							<li><a href="#">Send Reminder</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card-content">
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita perspiciatis sed ad delectus fugit suscipit dolorum quis, quaerat possimus, dicta beatae sint eum saepe animi. Eligendi reiciendis aut fugit deserunt.</p>
+				</blockquote>
+				<div class="data-grid grid-xs-1 grid-sm-2 grid-md-3 grid-lg-5">
+					<dl>
+						<dt>Display Date</dt>
+						<dd>Saturday, June 17</dd>
+					</dl>
+					<dl>
+						<dt>Display Until</dt>
+						<dd>Monday, June 19</dd>
+					</dl>
+					<dl>
+						<dt>Posted By</dt>
+						<dd>Ellison, Ashleigh</dd>
+					</dl>
+					<dl>
+						<dt>Views</dt>
+						<dd>6</dd>
+					</dl>
+					<dl>
+						<dt>Payments</dt>
+						<dd>$30.00</dd>
+					</dl>
+				</div>
+			</div>
+			<div class="card-footer">
+				<div class="card-footer-actions">
+					<button class="btn btn-default">Edit</button>
+					<button class="btn btn-default">Copy</button>
+					<button class="btn btn-default">Delete</button>
+					<button class="btn btn-default">Send Reminder</button>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+	</div>
+
+
+
+
+	<!-- toolkit scripts -->
+	<script src="assets/toolkit/scripts/toolkit.js"></script>
+	<!-- /toolkit scripts -->
+
+</body>
+</html>
