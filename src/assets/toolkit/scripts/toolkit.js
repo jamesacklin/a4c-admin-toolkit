@@ -75,7 +75,7 @@ $(function () {
     }
 
     $(".navbar-branded-inverse").each(function () {
-        var brandColor = $("this").attr("data-brand");
+        var brandColor = $(this).attr("data-brand");
         if (!brandColor) {
             brandColor = "#000000";
         }
@@ -85,7 +85,7 @@ $(function () {
     });
 
     $(".navbar-branded").each(function () {
-        var brandColor = $("this").attr("data-brand");
+        var brandColor = $(this).attr("data-brand");
         if (!brandColor) {
             brandColor = "#000000";
         }
@@ -99,12 +99,12 @@ $(function () {
     }
 
     $(".has-clear input[type=\"text\"], .has-clear input[type=\"search\"], .has-clear input[type=\"email\"], .has-clear input[type=\"tel\"]").on("input propertychange", function () {
-        var $this = $("this");
+        var $this = $(this);
         var visible = Boolean($this.val());
         $this.siblings(".form-control-clear").toggleClass("hidden", !visible);
     }).trigger("propertychange");
 
     $(".form-control-clear").click(function () {
-        $("this").siblings("input").val("").trigger("propertychange").focus();
+        $(this).siblings("input").val("").trigger("propertychange").focus();
     });
 });
