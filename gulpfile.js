@@ -149,7 +149,8 @@ gulp.task('serve', function () {
 	gulp.watch('src/assets/toolkit/styles/**/*.scss', ['styles:toolkit:watch']);
 
 	gulp.task('scripts:watch', ['scripts'], reload);
-	gulp.watch('src/assets/{fabricator,toolkit}/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
+	// Only send fabricator to Webpack compiler
+	gulp.watch('src/assets/fabricator/scripts/**/*.js', ['scripts:watch']).on('change', webpackCache);
 
 	gulp.task('images:watch', ['images'], reload);
 	gulp.watch(config.src.images, ['images:watch']);
