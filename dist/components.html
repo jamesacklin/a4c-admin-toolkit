@@ -13,6 +13,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+
 
 
 	<!-- toolkit styles -->
@@ -73,6 +78,9 @@
 					<ul>
 						<li>
 							<a href="components.html#buttons">Buttons</a>
+						</li>
+						<li>
+							<a href="components.html#edit_in_place">Edit In Place</a>
 						</li>
 						<li>
 							<a href="components.html#form_elements">Form Elements</a>
@@ -298,6 +306,83 @@
 	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-primary btn-lg btn-block&quot;&gt;Block level button&lt;/button&gt;
 	&lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-default btn-lg btn-block&quot;&gt;Block level button&lt;/button&gt;
 &lt;/div&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="edit_in_place">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Edit In Place</h2>
+		<hr>
+	</div>
+		<div class="f-item-group" id="edit_in_place.edit_in_place">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Edit In Place</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>To provide users a way to quickly edit values on a without editing the entire data construct (flipping the Beverage Cart status from Not Running to Running, for example), make liberal use of inline editing. We make use of the <a href="https://vitalets.github.io/x-editable/">X-editable</a> library for this. (<em>This is a lie but will soon be true: the library is included in <code>toolkit.js</code> and the requisite styles are included in <code>toolkit.css</code>. The bundled version of X-editable works with Bootstrap 3.</em>)</p>
+<p>Your best bet is to follow <a href="https://vitalets.github.io/x-editable/docs.html">the X-editable docs</a> for exact implementation instructions, but in essence, add all options inline to the link that you want to enact edit-in-place functionality upon. The toolkit JavaScript picks up on the <code>data-editable</code> attribute, and X-editable handles the rest.</p>
+<p>From the X-editable docs, here are the main attributes you should define:</p>
+<pre>
+  type - type of input (text, textarea, select, etc)
+  url - url to server-side script to process submitted value (/post, post.php etc)
+  pk - primary key of record to be updated (ID in db)
+  id or name - name of field to be updated (column in db). Taken from id or data-name attribute
+  value - initial value. Usefull for select, where value is integer key of text to be shown. If empty - will be taken from element html contents
+</pre>
+<p>Check out the <a href="https://vitalets.github.io/x-editable/demo-bs3.html">X-editable demos</a> for more (the select and checkbox <code>data-type</code>s should be of particular interest).</p>
+
+</div>
+<div class="f-item-preview">
+	<p>Normal text:<br>
+	<a href="#" id="fieldname" data-editable data-type="text" data-pk="1" data-title="Edit Value">Click to edit me</a>
+</p>
+
+<p>With POST:<br>
+	<a href="#" id="fieldname" data-editable data-type="text" data-pk="1" data-url="/post" data-title="Edit Value">This will fail, but edit me anyway</a>
+</p>
+
+<p>Date (requires moment.js, included):<br>
+	<a href="#" id="dob" data-editable data-type="combodate" data-value="1984-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1" data-title="Select Date of Birth" class="editable editable-click" data-original-title=""
+	 title="">15/05/1984</a>
+</p>
+
+<p>Textarea:<br>
+	<a href="#" id="comments" data-editable data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click" data-original-title="" title="">Multiline textarea!</a>
+</p>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;p&gt;Normal text:&lt;br&gt;
+	&lt;a href&#x3D;&quot;#&quot; id&#x3D;&quot;fieldname&quot; data-editable data-type&#x3D;&quot;text&quot; data-pk&#x3D;&quot;1&quot; data-title&#x3D;&quot;Edit Value&quot;&gt;Click to edit me&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;With POST:&lt;br&gt;
+	&lt;a href&#x3D;&quot;#&quot; id&#x3D;&quot;fieldname&quot; data-editable data-type&#x3D;&quot;text&quot; data-pk&#x3D;&quot;1&quot; data-url&#x3D;&quot;/post&quot; data-title&#x3D;&quot;Edit Value&quot;&gt;This will fail, but edit me anyway&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Date (requires moment.js, included):&lt;br&gt;
+	&lt;a href&#x3D;&quot;#&quot; id&#x3D;&quot;dob&quot; data-editable data-type&#x3D;&quot;combodate&quot; data-value&#x3D;&quot;1984-05-15&quot; data-format&#x3D;&quot;YYYY-MM-DD&quot; data-viewformat&#x3D;&quot;DD/MM/YYYY&quot; data-template&#x3D;&quot;D / MMM / YYYY&quot; data-pk&#x3D;&quot;1&quot; data-title&#x3D;&quot;Select Date of Birth&quot; class&#x3D;&quot;editable editable-click&quot; data-original-title&#x3D;&quot;&quot;
+	 title&#x3D;&quot;&quot;&gt;15/05/1984&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Textarea:&lt;br&gt;
+	&lt;a href&#x3D;&quot;#&quot; id&#x3D;&quot;comments&quot; data-editable data-type&#x3D;&quot;textarea&quot; data-pk&#x3D;&quot;1&quot; data-placeholder&#x3D;&quot;Your comments here...&quot; data-title&#x3D;&quot;Enter comments&quot; class&#x3D;&quot;editable editable-pre-wrapped editable-click&quot; data-original-title&#x3D;&quot;&quot; title&#x3D;&quot;&quot;&gt;Multiline textarea!&lt;/a&gt;
+&lt;/p&gt;</code></pre>
 </div>
 
 		</div>

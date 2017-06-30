@@ -1,0 +1,33 @@
+---
+notes: |
+  To provide users a way to quickly edit values on a without editing the entire data construct (flipping the Beverage Cart status from Not Running to Running, for example), make liberal use of inline editing. We make use of the <a href="https://vitalets.github.io/x-editable/">X-editable</a> library for this. (_This is a lie but will soon be true: the library is included in `toolkit.js` and the requisite styles are included in `toolkit.css`. The bundled version of X-editable works with Bootstrap 3._)
+
+  Your best bet is to follow <a href="https://vitalets.github.io/x-editable/docs.html">the X-editable docs</a> for exact implementation instructions, but in essence, add all options inline to the link that you want to enact edit-in-place functionality upon. The toolkit JavaScript picks up on the `data-editable` attribute, and X-editable handles the rest.
+
+  From the X-editable docs, here are the main attributes you should define:
+  <pre>
+    type - type of input (text, textarea, select, etc)
+    url - url to server-side script to process submitted value (/post, post.php etc)
+    pk - primary key of record to be updated (ID in db)
+    id or name - name of field to be updated (column in db). Taken from id or data-name attribute
+    value - initial value. Usefull for select, where value is integer key of text to be shown. If empty - will be taken from element html contents
+  </pre>
+
+  Check out the <a href="https://vitalets.github.io/x-editable/demo-bs3.html">X-editable demos</a> for more (the select and checkbox `data-type`s should be of particular interest).
+---
+
+<p>Normal text:<br>
+  <a href="#" id="fieldname" data-editable data-type="text" data-pk="1" data-title="Edit Value">Click to edit me</a>
+</p>
+
+<p>With POST:<br>
+  <a href="#" id="fieldname" data-editable data-type="text" data-pk="1" data-url="/post" data-title="Edit Value">This will fail, but edit me anyway</a>
+</p>
+
+<p>Date (requires moment.js, included):<br>
+  <a href="#" id="dob" data-editable data-type="combodate" data-value="1984-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1" data-title="Select Date of Birth" class="editable editable-click" data-original-title="" title="">15/05/1984</a>
+</p>
+
+<p>Textarea:<br>
+  <a href="#" id="comments" data-editable data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-title="Enter comments" class="editable editable-pre-wrapped editable-click" data-original-title="" title="">Multiline textarea!</a>
+</p>

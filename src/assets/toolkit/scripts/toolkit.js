@@ -107,4 +107,7 @@ $(function () {
     $(".form-control-clear").click(function () {
         $(this).siblings("input").val("").trigger("propertychange").focus();
     });
+
+    $("[data-editable]").editable();
+
 });
