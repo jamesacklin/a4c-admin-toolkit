@@ -1,6 +1,6 @@
 ---
 notes: |
-  To provide users a way to quickly edit values on a without editing the entire data construct (flipping the Beverage Cart status from Not Running to Running, for example), make liberal use of inline editing. We make use of the <a href="https://vitalets.github.io/x-editable/">X-editable</a> library for this. (_This is a lie but will soon be true: the library is included in `toolkit.js` and the requisite styles are included in `toolkit.css`. The bundled version of X-editable works with Bootstrap 3._)
+  To provide users a way to quickly edit values on a without editing the entire data construct (flipping the Beverage Cart status from Not Running to Running, for example), make liberal use of inline editing. We make use of the <a href="https://vitalets.github.io/x-editable/">X-editable</a> library for this. The library is included in `toolkit.js` and the requisite styles are included in `toolkit.css`. The bundled version of X-editable works with Bootstrap 3.
 
   Your best bet is to follow <a href="https://vitalets.github.io/x-editable/docs.html">the X-editable docs</a> for exact implementation instructions, but in essence, add all options inline to the link that you want to enact edit-in-place functionality upon. The toolkit JavaScript picks up on the `data-editable` attribute, and X-editable handles the rest.
 
