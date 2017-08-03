@@ -86,6 +86,9 @@
 							<a href="components.html#horizontal_navbars">Horizontal Navbars</a>
 						</li>
 						<li>
+							<a href="components.html#pagination">Pagination</a>
+						</li>
+						<li>
 							<a href="components.html#vertical_navbars">Vertical Navbars</a>
 						</li>
 					</ul>
@@ -976,6 +979,305 @@
 		&lt;!-- /.navbar-collapse --&gt;
 	&lt;/div&gt;
 	&lt;!-- /.container-fluid --&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+
+		</div>
+
+</div>
+
+
+<div class="f-item-group" id="pagination">
+
+	<div class="f-item-heading-group">
+		<h2 class="f-item-heading" data-f-toggle="labels">Pagination</h2>
+		<hr>
+	</div>
+		<div class="f-item-group" id="pagination.01-default-pagination">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Default Pagination</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>If a listing of elements in the admin tool results in lots of pages, you may wish to add some sort of pagination to each page. This pagination snippet is hard to miss, easily readable, and because the page numbers are buttons,  they are all very large click areas.</p>
+
+</div>
+<div class="f-item-preview">
+	<nav>
+	<ul class="pagination">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;nav&gt;
+	&lt;ul class&#x3D;&quot;pagination&quot;&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Previous&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Next&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="pagination.02-disabled-and-active-states">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Disabled And Active States</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Page links are customizable for different circumstances. Use <code>.disabled</code> for unclickable links and <code>.active</code> to indicate the current page.</p>
+
+</div>
+<div class="f-item-preview">
+	<nav>
+	<ul class="pagination">
+		<li class="page-item disabled">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item active"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;nav&gt;
+	&lt;ul class&#x3D;&quot;pagination&quot;&gt;
+		&lt;li class&#x3D;&quot;page-item disabled&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Previous&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item active&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Next&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+</div>
+
+		</div>
+		<div class="f-item-group" id="pagination.03-sizing">
+			<div class="f-item-heading-group" data-f-toggle="labels">
+				<h3 class="f-item-heading">Sizing</h3>
+				<div class="f-item-controls">
+					<span class="f-control f-icon" data-f-toggle-control="notes" title="Toggle Notes">
+						<svg>
+							<use xlink:href="#f-icon-notes" />
+						</svg>
+					</span>
+					<span class="f-control f-icon" data-f-toggle-control="code" title="Toggle Code">
+						<svg>
+							<use xlink:href="#f-icon-code" />
+						</svg>
+					</span>
+				</div>
+			</div><div class="f-item-notes" data-f-toggle="notes">
+	<p>Fancy larger or smaller pagination? Add <code>.pagination-lg</code> or <code>.pagination-sm</code> for additional sizes.</p>
+
+</div>
+<div class="f-item-preview">
+	<nav>
+	<ul class="pagination pagination-lg">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<nav>
+	<ul class="pagination">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+<nav>
+	<ul class="pagination pagination-sm">
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Previous">
+				<span aria-hidden="true">&laquo;</span>
+				<span class="sr-only">Previous</span>
+			</a>
+		</li>
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link" href="#">4</a></li>
+		<li class="page-item"><a class="page-link" href="#">5</a></li>
+		<li class="page-item">
+			<a class="page-link" href="#" aria-label="Next">
+				<span aria-hidden="true">&raquo;</span>
+				<span class="sr-only">Next</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+</div>
+<div class="f-item-code f-item-hidden" data-f-toggle="code">
+	<pre><code class="language-markup">&lt;nav&gt;
+	&lt;ul class&#x3D;&quot;pagination pagination-lg&quot;&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Previous&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Next&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;nav&gt;
+	&lt;ul class&#x3D;&quot;pagination&quot;&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Previous&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Next&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;nav&gt;
+	&lt;ul class&#x3D;&quot;pagination pagination-sm&quot;&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Previous&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;laquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Previous&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;4&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot;&gt;5&lt;/a&gt;&lt;/li&gt;
+		&lt;li class&#x3D;&quot;page-item&quot;&gt;
+			&lt;a class&#x3D;&quot;page-link&quot; href&#x3D;&quot;#&quot; aria-label&#x3D;&quot;Next&quot;&gt;
+				&lt;span aria-hidden&#x3D;&quot;true&quot;&gt;&amp;raquo;&lt;/span&gt;
+				&lt;span class&#x3D;&quot;sr-only&quot;&gt;Next&lt;/span&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
 &lt;/nav&gt;</code></pre>
 </div>
 
