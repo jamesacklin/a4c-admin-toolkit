@@ -110,7 +110,8 @@ $(function () {
     $(".form-control-clear").click(function () {
         $(this).siblings("input").val("").trigger("propertychange").focus();
     });
-
+    
+    $.fn.editable.defaults.mode = 'inline';
     $("[data-editable]").editable();
 
 });
