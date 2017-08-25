@@ -37,6 +37,7 @@ $white: #FFF;
 @import "vendor/_bootstrap.scss";
 @import "vendor/bootstrap/_panels.scss";
 @import "vendor/bootstrap/_pagination.scss";
+@import "vendor/_bootstrap-editable.scss";
 
 // Custom styles
 body,
@@ -97,9 +98,9 @@ body {
 				padding-left  : 7px;
 				padding-bottom: 7px;
 				text-transform: uppercase;
-				letter-spacing: .025em;
-				opacity       : .8;
-				font-size     : .8em;
+				letter-spacing: 0.025em;
+				opacity       : 0.8;
+				font-size     : 0.8em;
 			}
 		}
 
@@ -126,8 +127,8 @@ body {
 	background: $brand-primary;
 	color     : $white;
 	text-align: center;
-	font-size : .8em;
-	padding   : .5em 5%;
+	font-size : 0.8em;
+	padding   : 0.5em 5%;
 
 	a {
 		color          : $white;
@@ -219,7 +220,7 @@ body {
 
 	// Status cards
 	&.card-muted {
-		opacity: .5;
+		opacity: 0.5;
 	}
 
 	&.card-danger,
@@ -298,7 +299,7 @@ body {
 
 	dt {
 		text-transform: uppercase;
-		font-size     : .8em;
+		font-size     : 0.8em;
 		color         : inherit;
 	}
 
@@ -508,7 +509,7 @@ body {
 		float  : none;
 
 		.btn-group {
-			margin-bottom: .5em;
+			margin-bottom: 0.5em;
 
 			.btn {
 				display: block;
@@ -541,4 +542,10 @@ body {
 	z-index       : 10;
 	pointer-events: auto;
 	cursor        : pointer;
+}
+
+.editable-click,
+a.editable-click,
+a.editable-click:hover {
+	border-bottom-color: $brand-primary;
 }

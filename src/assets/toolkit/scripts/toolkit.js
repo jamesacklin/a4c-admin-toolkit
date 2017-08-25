@@ -2,6 +2,9 @@
  * Toolkit JavaScript
  */
 
+require('../../../../node_modules/x-editable/dist/bootstrap3-editable/js/bootstrap-editable.min.js');
+
+
 "use strict";
 
 $(function () {
@@ -107,4 +110,8 @@ $(function () {
     $(".form-control-clear").click(function () {
         $(this).siblings("input").val("").trigger("propertychange").focus();
     });
+    
+    $.fn.editable.defaults.mode = 'inline';
+    $("[data-editable]").editable();
+
 });
